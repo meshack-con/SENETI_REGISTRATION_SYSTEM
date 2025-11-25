@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlit as st 
 from supabase import create_client
 import pandas as pd
 
@@ -48,7 +48,7 @@ def fetch_all_students():
 # -------------------------------
 # STREAMLIT CONFIG
 # -------------------------------
-st.set_page_config(page_title="SENETI DODOMA MEMBERS RECORDS MANAGEMENT SYSTEM", layout="wide")
+st.set_page_config(page_title="Seneti Dodoma Members Records Management System", layout="wide")
 st.markdown("""
 <style>
 body { background-color: black !important; }
@@ -72,7 +72,7 @@ if "login_attempt" not in st.session_state:
 # LOGIN SCREEN
 # -------------------------------
 def show_login():
-    st.markdown("<h1 style='color:#ffea00;text-align:center;'>COBE & SOLS Admin Login</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='color:#ffea00;text-align:center;'>Seneti Dodoma Members Records Management System - Admin Login</h1>", unsafe_allow_html=True)
     c1, c2, c3 = st.columns([1,2,1])
     with c2:
         username = st.text_input("Username", key="login_username")
@@ -153,6 +153,4 @@ else:
     if st.button("Logout"):
         st.session_state.admin_logged_in = False
         st.session_state.admin_name = None
-        st.experimental_rerun = lambda: None  # dummy to avoid previous call
         st.success("Logged out. Refresh to login again.")
-
