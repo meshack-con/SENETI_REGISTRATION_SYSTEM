@@ -48,7 +48,7 @@ def fetch_all_students():
 # -------------------------------
 # STREAMLIT CONFIG
 # -------------------------------
-st.set_page_config(page_title="COBE & SOLS Admin Dashboard", layout="wide")
+st.set_page_config(page_title="SENETI DODOMA MEMBERS RECORDS MANAGEMENT SYSTEM", layout="wide")
 st.markdown("""
 <style>
 body { background-color: black !important; }
@@ -155,3 +155,4 @@ else:
         st.session_state.admin_name = None
         st.experimental_rerun = lambda: None  # dummy to avoid previous call
         st.success("Logged out. Refresh to login again.")
+
